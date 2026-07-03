@@ -6,44 +6,102 @@
 <title>Desafío DBA</title>
 <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
 <div class="container">
+
 <section id="intro" class="card">
 <h1>🧠 Desafío DBA</h1>
-<p>Juego educativo basado en los Dispositivos Básicos de Aprendizaje.</p>
+
+<p>
+Juego educativo basado en los Dispositivos Básicos de Aprendizaje.
+</p>
+
 <ul>
-<li>🎯 Atención</li><li>🧠 Memoria</li><li>👁️ Percepción</li>
-<li>🚀 Motivación</li><li>💡 Cognición</li><li>📚 Aprendizaje</li>
+<li>🎯 Atención</li>
+<li>🧠 Memoria</li>
+<li>👁️ Percepción</li>
+<li>🚀 Motivación</li>
+<li>💡 Cognición</li>
+<li>📚 Aprendizaje</li>
 </ul>
-<button onclick="mostrarDificultades()">Continuar</button>
+
+<button onclick="mostrarDificultades()">
+Continuar
+</button>
+
 </section>
 
 <section id="dificultad" class="card hidden">
+
 <h2>Selecciona dificultad</h2>
-<button onclick="iniciarJuego('facil')">🟢 Fácil</button>
-<button onclick="iniciarJuego('normal')">🟡 Normal</button>
-<button onclick="iniciarJuego('dificil')">🔴 Difícil</button>
+
+<button onclick="iniciarJuego('facil')">
+🟢 Fácil
+</button>
+
+<button onclick="iniciarJuego('normal')">
+🟡 Normal
+</button>
+
+<button onclick="iniciarJuego('dificil')">
+🔴 Difícil
+</button>
+
 </section>
 
 <section id="juego" class="card hidden">
+
 <h2 id="progreso"></h2>
-<div id="letras"></div>
-<input id="respuesta" placeholder="Escribe la palabra">
-<div>
-<button onclick="verificarRespuesta()">Responder</button>
-<button onclick="usarAyuda()">💡 Ayuda</button>
+
+<div class="barra">
+<div id="progresoBarra"></div>
 </div>
-<p id="valorPuntos">Valor actual: 1 punto</p>
+
+<div id="letras"></div>
+
+<input
+id="respuesta"
+placeholder="Escribe la palabra">
+
+<div>
+
+<button onclick="verificarRespuesta()">
+Responder
+</button>
+
+<button onclick="usarAyuda()">
+💡 Ayuda
+</button>
+
+</div>
+
+<p id="valorPuntos">
+Valor actual: 1 punto
+</p>
+
 <p id="ayuda"></p>
+
 </section>
 
 <section id="resultado" class="card hidden">
+
 <h2>🏁 Partida finalizada</h2>
+
 <h3 id="puntajeFinal"></h3>
+
 <p id="estadisticas"></p>
-<button onclick="location.reload()">Jugar nuevamente</button>
+
+<button onclick="location.reload()">
+Jugar nuevamente
+</button>
+
 </section>
+
 </div>
+
 <script src="script.js"></script>
+
 </body>
 </html>
