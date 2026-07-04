@@ -571,25 +571,40 @@ function verificarRespuesta(){
 
         puntaje += valor;
 
-        alert(
-            "✅ Correcto\n\n" +
-            actual.palabra +
-            "\n\n" +
-            actual.definicion
-        );
+        correctas++;
+
+        feedbackTitulo.textContent =
+            "✅ Correcto";
 
     }
     else{
 
-        alert(
-            "❌ Incorrecto\n\n" +
-            "Respuesta correcta:\n" +
-            actual.palabra +
-            "\n\n" +
-            actual.definicion
-        );
+        incorrectas++;
+
+        feedbackTitulo.textContent =
+            "❌ Incorrecto";
 
     }
+
+    feedbackPalabra.textContent =
+        actual.palabra;
+
+    feedbackCategoria.textContent =
+        "Categoría: " +
+        actual.categoria;
+
+    feedbackDefinicion.textContent =
+        actual.definicion;
+
+    juego.classList.add("hidden");
+
+    feedback.classList.remove("hidden");
+
+}
+
+function siguientePregunta(){
+
+    feedback.classList.add("hidden");
 
     indice++;
 
@@ -600,11 +615,14 @@ function verificarRespuesta(){
     }
     else{
 
+        juego.classList.remove("hidden");
+
         mostrar();
 
     }
 
 }
+
 
 function fin(){
 
@@ -620,8 +638,15 @@ function fin(){
         "Puntaje: " +
         puntaje.toFixed(2);
 
-    estadisticas.textContent =
-        "Ayudas utilizadas: " +
-        ayudas;
+    estadisticas.innerHTML =
+
+    "Correctas: " +
+    correctas +
+
+    "<br>Incorrectas: " +
+    incorrectas +
+
+    "<br>Ayudas utilizadas: " +
+    ayudas;
 
 }

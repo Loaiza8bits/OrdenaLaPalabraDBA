@@ -54,3 +54,17 @@ input{
     border-radius:10px;
     transition:0.3s;
 }
+
+#feedback{
+
+    text-align:center;
+
+}
+
+#feedbackPalabra{
+
+    font-size:2rem;
+
+    margin:15px 0;
+
+}
