@@ -561,6 +561,9 @@ function usarAyuda(){
 
 function verificarRespuesta(){
 
+    console.log("Entró a verificarRespuesta");
+
+
     let actual =
         palabrasPartida[indice];
 
