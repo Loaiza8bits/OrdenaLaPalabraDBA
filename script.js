@@ -421,6 +421,8 @@ let indice = 0;
 let puntaje = 0;
 let ayudas = 0;
 let valor = 1;
+let correctas = 0;
+let incorrectas = 0;
 
 function mostrarDificultades(){
 
@@ -573,38 +575,42 @@ function verificarRespuesta(){
 
         correctas++;
 
-        feedbackTitulo.textContent =
-            "✅ Correcto";
+        document.getElementById("feedbackTitulo").textContent =
+    "✅ Correcto";
 
     }
     else{
 
         incorrectas++;
 
-        feedbackTitulo.textContent =
-            "❌ Incorrecto";
+        document.getElementById("feedbackTitulo").textContent =
+    "❌ Incorrecto";
 
     }
 
-    feedbackPalabra.textContent =
-        actual.palabra;
+   document.getElementById("feedbackPalabra").textContent =
+    actual.palabra;
 
-    feedbackCategoria.textContent =
-        "Categoría: " +
-        actual.categoria;
+    document.getElementById("feedbackCategoria").textContent =
+    "Categoría: " + actual.categoria;
 
-    feedbackDefinicion.textContent =
-        actual.definicion;
+    document.getElementById("feedbackDefinicion").textContent =
+    actual.definicion;
 
-    juego.classList.add("hidden");
+    document
+    .getElementById("juego")
+    .classList.add("hidden");
 
-    feedback.classList.remove("hidden");
-
+    document
+    .getElementById("feedback")
+    .classList.add("hidden");
 }
 
 function siguientePregunta(){
 
-    feedback.classList.add("hidden");
+    document
+    .getElementById("feedback")
+    .classList.add("hidden");
 
     indice++;
 
@@ -615,7 +621,9 @@ function siguientePregunta(){
     }
     else{
 
-        juego.classList.remove("hidden");
+     document
+    .getElementById("juego")
+    .classList.remove("hidden");
 
         mostrar();
 
