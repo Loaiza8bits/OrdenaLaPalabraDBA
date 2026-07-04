@@ -561,23 +561,23 @@ function usarAyuda(){
 
 function verificarRespuesta(){
 
-    console.log("1");
+    
 
     let actual =
         palabrasPartida[indice];
 
-    console.log("2");
+    
 
     let respuestaUsuario =
         respuesta.value
         .trim()
         .toUpperCase();
 
-    console.log("3");
+   
 
     if(respuestaUsuario === actual.palabra){
 
-        console.log("4");
+       
 
         puntaje += valor;
 
@@ -591,7 +591,7 @@ function verificarRespuesta(){
     }
     else{
 
-        console.log("5");
+       
 
         incorrectas++;
 
@@ -602,14 +602,14 @@ function verificarRespuesta(){
 
     }
 
-    console.log("6");
+   
 
     document
         .getElementById("feedbackPalabra")
         .textContent =
         actual.palabra;
 
-    console.log("7");
+  
 
     document
         .getElementById("feedbackCategoria")
@@ -617,27 +617,25 @@ function verificarRespuesta(){
         "Categoría: " +
         actual.categoria;
 
-    console.log("8");
+   
 
     document
         .getElementById("feedbackDefinicion")
         .textContent =
         actual.definicion;
 
-    console.log("9");
+    
 
     document
         .getElementById("juego")
         .classList.add("hidden");
 
-    console.log("10");
-
+    
     document
         .getElementById("feedback")
         .classList.remove("hidden");
 
-    console.log("11");
-
+    
 }
 
 function siguientePregunta(){
