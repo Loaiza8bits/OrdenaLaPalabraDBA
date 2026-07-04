@@ -463,20 +463,29 @@ function iniciarJuego(dificultad){
 
 function mezclar(texto){
 
-    let letras = texto.split("");
+    let resultado;
 
-    for(let i=letras.length-1;i>0;i--){
+    do{
 
-        let j =
+        let letras = texto.split("");
+
+        for(let i=letras.length-1;i>0;i--){
+
+            let j =
             Math.floor(
                 Math.random()*(i+1)
             );
 
-        [letras[i],letras[j]] =
-        [letras[j],letras[i]];
-    }
+            [letras[i],letras[j]] =
+            [letras[j],letras[i]];
+        }
 
-    return letras.join(" ");
+        resultado = letras.join("");
+
+    }
+    while(resultado === texto);
+
+    return resultado.split("").join(" ");
 
 }
 
