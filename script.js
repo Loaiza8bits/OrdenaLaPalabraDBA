@@ -567,6 +567,8 @@ function verificarRespuesta(){
     let actual =
         palabrasPartida[indice];
 
+	console.log(actual);
+
     let respuestaUsuario =
         respuesta.value
         .trim()
