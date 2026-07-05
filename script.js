@@ -682,54 +682,57 @@ function fin(){
         .getElementById("resultado")
         .classList.remove("hidden");
 
-    puntajeFinal.innerHTML =
+    let nivel = "";
 
-    "<h3>Puntaje Final</h3>" +
+    if(puntaje >= 9){
 
-    "<h1>" +
-    puntaje.toFixed(2) +
-    " / 10</h1>" +
+        nivel = "🏆 Excelente";
 
-    "<p>" +
-    nivel +
-    "</p>";
+    }
+    else if(puntaje >= 7){
 
-    estadisticas.innerHTML =
+        nivel = "⭐⭐⭐⭐ Muy bueno";
 
-    "✅ Correctas: " +
-    correctas +
+    }
+    else if(puntaje >= 5){
 
-    "<br><br>" +
+        nivel = "⭐⭐⭐ Bueno";
 
-    "❌ Incorrectas: " +
-    incorrectas +
+    }
+    else{
 
-    "<br><br>" +
+        nivel = "📚 Sigue practicando";
 
-    "💡 Ayudas utilizadas: " +
-    ayudas;
+    }
 
-let nivel = "";
+    document
+        .getElementById("puntajeFinal")
+        .innerHTML =
 
-if(puntaje >= 9){
+        "<h3>Puntaje Final</h3>" +
 
-    nivel = "🏆 Excelente";
+        "<h1>" +
+        puntaje.toFixed(2) +
+        " / 10</h1>" +
 
-}
-else if(puntaje >= 7){
+        "<p>" +
+        nivel +
+        "</p>";
 
-    nivel = "⭐⭐⭐⭐ Muy bueno";
+    document
+        .getElementById("estadisticas")
+        .innerHTML =
 
-}
-else if(puntaje >= 5){
+        "✅ Correctas: " +
+        correctas +
 
-    nivel = "⭐⭐⭐ Bueno";
+        "<br><br>" +
 
-}
-else{
+        "❌ Incorrectas: " +
+        incorrectas +
 
-    nivel = "📚 Sigue practicando";
+        "<br><br>" +
 
-}
-
+        "💡 Ayudas utilizadas: " +
+        ayudas;
 }
