@@ -673,6 +673,11 @@ function siguientePregunta(){
 
 
 function fin(){
+console.log("fin ejecutada");
+console.log(puntaje);
+console.log(correctas);
+console.log(incorrectas);
+console.log(ayudas);
 
     document
         .getElementById("juego")
