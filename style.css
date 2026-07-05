@@ -1,8 +1,18 @@
 body{
+
     font-family:Arial,sans-serif;
-    background:#f4f6f9;
+
+    background:
+    linear-gradient(
+        135deg,
+        #f4f6f9,
+        #dfe9f3
+    );
+
     margin:0;
+
     padding:20px;
+
 }
 
 .container{
@@ -22,21 +32,51 @@ body{
 }
 
 button{
-    padding:10px 16px;
-    margin:5px;
+    padding:12px 20px;
+    margin:6px;
     cursor:pointer;
+    border:none;
+    border-radius:8px;
+    font-size:1rem;
+    font-weight:bold;
+    transition:.2s;
+}
+
+button:hover{
+    transform:translateY(-2px);
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
 }
 
 #letras{
     font-size:2rem;
     font-weight:bold;
     letter-spacing:6px;
-    margin:25px 0;
+
+    margin:25px auto;
+
+    padding:20px;
+
+    background:#eef4ff;
+
+    border-radius:12px;
+
+    text-align:center;
+
+    max-width:500px;
+
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
 }
 
 input{
-    padding:10px;
+    padding:12px;
+
     width:300px;
+
+    border:2px solid #d0d0d0;
+
+    border-radius:8px;
+
+    font-size:1rem;
 }
 
 .barra{
@@ -66,5 +106,42 @@ input{
     font-size:2rem;
 
     margin:15px 0;
+
+}
+
+.facil{
+    background:#4CAF50;
+    color:white;
+}
+
+.normal{
+    background:#FFC107;
+    color:black;
+}
+
+.dificil{
+    background:#F44336;
+    color:white;
+}
+
+#feedback{
+
+    text-align:center;
+
+}
+
+#feedbackTitulo{
+
+    font-size:2rem;
+
+}
+
+#feedbackPalabra{
+
+    font-size:2.2rem;
+
+    font-weight:bold;
+
+    color:#2b4c7e;
 
 }
