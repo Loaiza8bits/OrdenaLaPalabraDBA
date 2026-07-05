@@ -583,10 +583,14 @@ function verificarRespuesta(){
 
         correctas++;
 
-        document
-            .getElementById("feedbackTitulo")
-            .textContent =
-            "✅ Correcto";
+        let titulo =
+    document.getElementById("feedbackTitulo");
+
+titulo.textContent =
+    "✅ Correcto";
+
+titulo.className =
+    "correcto";
 
     }
     else{
@@ -595,10 +599,14 @@ function verificarRespuesta(){
 
         incorrectas++;
 
-        document
-            .getElementById("feedbackTitulo")
-            .textContent =
-            "❌ Incorrecto";
+        let titulo =
+    document.getElementById("feedbackTitulo");
+
+titulo.textContent =
+    "❌ Incorrecto";
+
+titulo.className =
+    "incorrecto";
 
     }
 
@@ -674,19 +682,54 @@ function fin(){
         .getElementById("resultado")
         .classList.remove("hidden");
 
-    puntajeFinal.textContent =
-        "Puntaje: " +
-        puntaje.toFixed(2);
+    puntajeFinal.innerHTML =
+
+    "<h3>Puntaje Final</h3>" +
+
+    "<h1>" +
+    puntaje.toFixed(2) +
+    " / 10</h1>" +
+
+    "<p>" +
+    nivel +
+    "</p>";
 
     estadisticas.innerHTML =
 
-    "Correctas: " +
+    "✅ Correctas: " +
     correctas +
 
-    "<br>Incorrectas: " +
+    "<br><br>" +
+
+    "❌ Incorrectas: " +
     incorrectas +
 
-    "<br>Ayudas utilizadas: " +
+    "<br><br>" +
+
+    "💡 Ayudas utilizadas: " +
     ayudas;
+
+let nivel = "";
+
+if(puntaje >= 9){
+
+    nivel = "🏆 Excelente";
+
+}
+else if(puntaje >= 7){
+
+    nivel = "⭐⭐⭐⭐ Muy bueno";
+
+}
+else if(puntaje >= 5){
+
+    nivel = "⭐⭐⭐ Bueno";
+
+}
+else{
+
+    nivel = "📚 Sigue practicando";
+
+}
 
 }
